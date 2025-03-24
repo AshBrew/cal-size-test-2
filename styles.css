@@ -1,5 +1,9 @@
 body {
     -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 
 :root {
@@ -14,6 +18,7 @@ body {
     --fontWgt: 600;
     --headerFont: "Gaegu", serif;
     --textFont: "Sour Gummy", serif;
+    --dynamic-font-size: 3vw;
 }
 
 /* Containers */
@@ -23,32 +28,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 204px;
-    max-height: 194px;
-    width: 194px;
+    width: 90%;
+    max-width: 350px;
+    min-width: 180px;
     background-color: var(--container);
     border-radius: 40px;
     border: solid 3px var(--containerBorder-color);
     text-align: center;
     padding: 14px;
-    margin: 20px auto;
 }
 
 .inner-container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 190px;
-    max-height: 180px;
-    width: 180px;
+    width: 95%;
+    max-width: 320px;
+    min-width: 150px;
     background-color: var(--inner-container);
     border: solid 3px var(--innerBorder-color);
     border-radius: 32px;
     text-align: center;
     padding: 10px;
 }
+
 
 /* Days */
 .days {
@@ -68,17 +68,16 @@ td:last-child {
 }
 
 table {
-    user-select: none;
     border-collapse: collapse;
-    width: 140px;
-    margin: 1px auto;
+    width: 100%;
 }
 
 th, td {
-    padding: 0 4px;
-    line-height: 1.2;
-    border: 0;
+    font-family: var(--textFont);
+    font-size: var(--dynamic-font-size);
+    color: var(--weekday-color);
     text-align: center;
+    padding: 0.5w;
 }
 
 /* Days of the week */
@@ -100,7 +99,6 @@ th:last-child {
 
 /* Header */
 .header {
-    margin-bottom: -7px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,21 +106,16 @@ th:last-child {
 }
 
 #year {
-    user-select: none;
     font-family: var(--headerFont);
     color: var(--weekday-color);
-    font-size: 0.8em;
-    margin-bottom: -12px;
+    font-size: 1.5vw;
     font-weight: var(--fontWgt);
 }
 
 #month {
-    user-select: none;
     font-family: var(--headerFont);
     color: var(--weekday-color);
-    padding: 0;
-    margin: 0;
-    font-size: 1.4em;
+    font-size: 3vw;
     letter-spacing: 1.5px;
     font-weight: var(--fontWgt);
 }
@@ -132,7 +125,6 @@ th:last-child {
     justify-content: space-between;
     align-items: center;
     width: 190px;
-    margin: 10px auto;
 }
 
 .controls button {
@@ -140,8 +132,7 @@ th:last-child {
     flex: 0 0 35px;
     text-align: center;
     font-family: var(--headerFont);
-    font-size: 1em;
-    font-weight: var(--fontWgt);
+    font-size: clamp(0.8em, 2vw, 1.2em);
     opacity: 0.6;
     border: 0;
     background-color: transparent;
