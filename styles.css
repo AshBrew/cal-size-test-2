@@ -23,16 +23,16 @@ body {
 
 /* Containers */
 .calendar-container {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 300px;
-    min-width: 275px;
-    max-height:293px;
-    min-height:293px;
+    max-width:400px;
+    min-width: 20x;
+    max-height:500px;
+    min-height:30px;
     background-color: var(--container);
     border-radius: 32px;
     border: solid 3px var(--containerBorder-color);
@@ -42,10 +42,10 @@ body {
 
 .inner-container {
     width: 95%;
-    max-width: 330px;
-    min-width: 40px;
-    max-height:300px;
-    min-height: 275px;
+    max-width:400px;
+    min-width:20px;
+    max-height:500px;
+    min-height:30px;
     background-color: var(--inner-container);
     border: solid 3px var(--innerBorder-color);
     border-radius: 32px;
@@ -57,10 +57,11 @@ body {
 /* Days */
 .days {
     font-family: var(--textFont);
-    font-size: 10px;
+    font-size: 10vw;
     color: var(--weekday-color);
     font-weight: var(--fontWgt);
     padding: 2px -10px;
+    position: relative;
 }
 
 td:first-child {
