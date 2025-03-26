@@ -1,13 +1,13 @@
 body {
     -webkit-tap-highlight-color: transparent;
-    margin-top: 0.5;
-    margin-bottom: 0.5;
-    margin-left: 0.5;
-    margin-right: 2;
+    margin-top: 1;
+    margin-bottom: 1;
+    margin-left: 1;
+    margin-right: 1;
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 90vw;
+    width: 90vw;
+    height: auto;
     overflow-x: scroll;
     overflow-y: scroll;
 }
@@ -32,7 +32,6 @@ display: none;
 .calendar-container {
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90vw;
@@ -48,7 +47,7 @@ display: none;
     width: 95%;
     height: 95%;
     background-color: var(--inner-container);
-    border: solid 3px var(--innerBorder-color);
+    border: solid 0.9vw var(--innerBorder-color);
     border-radius: 32px;
     text-align: center;
     padding: 10px;
@@ -82,7 +81,6 @@ th, td {
     font-size: 5vw;
     color: var(--day-color);
     text-align: center;
-    padding: 0.5w;
     font-weight:500;
 }
 
@@ -109,7 +107,6 @@ th:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
 #year {
@@ -117,7 +114,6 @@ th:last-child {
     color: var(--day-color);
     font-size: 4vw;
     font-weight: var(--fontWgt);
-    padding-bottom: 0.75vw;
     padding-top: 1vw;
 }
 
@@ -125,8 +121,8 @@ th:last-child {
     font-family: var(--headerFont);
     color: var(--day-color);
     font-size: 10vw;
-    letter-spacing: 0.5vw;
     font-weight: var(--fontWgt);
+    letter-spacing: 0.5vw;
 }
 
 .controls {
