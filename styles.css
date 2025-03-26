@@ -3,12 +3,17 @@ body {
     margin-top: 0.5;
     margin-bottom: 0.5;
     margin-left: 0.5;
-    margin-right: 0.5;
+    margin-right: 2;
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 90vw;
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+display: none;
 }
 
 :root {
